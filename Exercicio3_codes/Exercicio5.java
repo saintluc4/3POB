@@ -14,7 +14,7 @@ public class Exercicio5 {
             fatorial *= i;
         }
 
-        System.out.println(n + "! = " + fatorial);
+        System.out.printf("%d! = %d%n", n, fatorial);
 
         scanner.close();
     }

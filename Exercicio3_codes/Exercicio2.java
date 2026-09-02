@@ -21,9 +21,9 @@ public class Exercicio2 {
 
         if (contador > 0) {
             double media = (double) soma / contador;
-            System.out.println("Quantidade: " + contador);
-            System.out.println("Soma: " + soma);
-            System.out.println("Média: " + media);
+            System.out.printf("Quantidade: %d%n", contador);
+            System.out.printf("Soma: %d%n", soma);
+            System.out.printf("Média: %.2f%n", media);
         } else {
             System.out.println("Nenhum número foi digitado!");
         }

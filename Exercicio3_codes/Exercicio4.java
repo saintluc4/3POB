@@ -22,8 +22,8 @@ public class Exercicio4 {
             }
         }
 
-        System.out.println("Quantidade de pares: " + pares);
-        System.out.println("Quantidade de ímpares: " + impares);
+        System.out.printf("Quantidade de pares: %d%n", pares);
+        System.out.printf("Quantidade de ímpares: %d%n", impares);
 
         scanner.close();
     }

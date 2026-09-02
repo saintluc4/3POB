@@ -9,9 +9,9 @@ public class Exercicio1 {
         int num = scanner.nextInt();
 
         for (int i = 1; i <= 10; i++) {
-            System.out.println(num + " x " + i + " = " + (num * i));
+            System.out.printf("%d x %d = %d%n", num, i, (num * i));
         }
 
-        scanner.close();
+            scanner.close();
+        }
     }
-}
