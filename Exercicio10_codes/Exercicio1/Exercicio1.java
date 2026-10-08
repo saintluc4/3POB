@@ -1,4 +1,4 @@
-Epackage Exercicio10_codes.Exercicio1;
+EEpackage Exercicio10_codes.Exercicio1;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

@@ -3,7 +3,7 @@ package Exercicio8_codes.Exercicio4;
 public class Exercicio4 {
         public static void main(String[] args) {
 
-        // array da superclasse — guarda qualquer figura
+
         FiguraGeometrica[] figuras = {
             new Quadrado (4.0),
             new Retangulo(3.0, 5.0),
@@ -17,7 +17,7 @@ public class Exercicio4 {
 
         double areaTotal = 0.0;
 
-        // um único laço — polimorfismo resolve o tipo de cada figura
+
         for (FiguraGeometrica f : figuras) {
             f.exibirArea();
             areaTotal += f.calcularArea();

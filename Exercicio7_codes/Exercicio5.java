@@ -8,14 +8,14 @@ class Funcionario {
     private String matricula;
     private double salario;
 
-    // construtor completo — todos os 3 atributos
+
     public Funcionario(String nome, String matricula, double salario) {
         this.nome       = nome;
         this.matricula  = matricula;
         this.salario    = salario;
     }
 
-    // ── Getters ───────────────────────────────────────────
+
     public String getNome() {
         return nome;
     }
@@ -28,12 +28,12 @@ class Funcionario {
         return salario;
     }
 
-    // ── Setters ───────────────────────────────────────────
+
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    // regra de negócio: salário só pode aumentar
+
     public void setSalario(double novoSalario) {
         if (novoSalario > this.salario) {
             System.out.printf("Salário atualizado: R$ %.2f → R$ %.2f%n",
@@ -46,7 +46,7 @@ class Funcionario {
         }
     }
 
-    // ── Exibição ──────────────────────────────────────────
+
     public void exibirDados() {
         System.out.println("=============================");
         System.out.printf("Nome:       %s%n",    nome);
@@ -76,19 +76,19 @@ public class Exercicio5 {
         System.out.println("\n===== Dados iniciais =====");
         func.exibirDados();
 
-        // tentativa de aumento válido
+
         System.out.println("===== Aumento válido =====");
         System.out.print("Digite o novo salário (maior que o atual): ");
         func.setSalario(scanner.nextDouble());
         func.exibirDados();
 
-        // tentativa de redução — bloqueada pela regra
+
         System.out.println("===== Tentativa de redução =====");
         System.out.print("Digite um salário menor que o atual: ");
         func.setSalario(scanner.nextDouble());
         func.exibirDados();
 
-        // tentativa com valor igual — também bloqueada
+
         System.out.println("===== Tentativa com valor igual =====");
         func.setSalario(func.getSalario());
         func.exibirDados();

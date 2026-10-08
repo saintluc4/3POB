@@ -2,9 +2,9 @@ package Exercicio8_codes.Exercicio3;
 
 public class Exercicio3 {
 
-    // recebe qualquer Notificacao sem saber o tipo concreto
+
     static void processarEnvio(Notificacao notificacao, String texto) {
-        notificacao.enviar(texto); // dynamic binding resolve o tipo real
+        notificacao.enviar(texto);
     }
 
     public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class Exercicio3 {
             processarEnvio(n, mensagem);
         }
 
-        // testando tipos diferentes com mensagens distintas
+
         System.out.println("\n===== Envios individuais =====");
         processarEnvio(new EmailNotificacao("joao@email.com"),  "Bem-vindo!");
         processarEnvio(new SmsNotificacao  ("21988880000"),     "Código: 4821");

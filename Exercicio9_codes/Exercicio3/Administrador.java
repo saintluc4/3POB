@@ -18,7 +18,7 @@ public class Administrador implements Autenticavel, ExportavelJSON {
 
     @Override
     public String exportarJSON() {
-        // A senha nao faz parte dos dados exportados.
+
         return "{\"login\":\"" + escaparJSON(login)
                 + "\",\"nivelAcesso\":" + nivelAcesso + "}";
     }

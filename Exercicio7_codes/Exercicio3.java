@@ -6,13 +6,13 @@ class Retangulo {
     private double largura;
     private double altura;
 
-    // construtor — delega validação aos setters
+
     public Retangulo(double largura, double altura) {
         setLargura(largura);
         setAltura(altura);
     }
 
-    // ── Getters ───────────────────────────────────────────
+
     public double getLargura() {
         return largura;
     }
@@ -21,7 +21,7 @@ class Retangulo {
         return altura;
     }
 
-    // ── Setters com validação ─────────────────────────────
+
     public void setLargura(double largura) {
         if (largura > 0) {
             this.largura = largura;
@@ -40,7 +40,7 @@ class Retangulo {
         }
     }
 
-    // ── Métodos de cálculo ────────────────────────────────
+
     public double calcularArea() {
         return largura * altura;
     }
@@ -65,7 +65,7 @@ public class Exercicio3 {
 
         Scanner scanner = new Scanner(System.in);
 
-        // retângulo válido — usuário digita
+
         System.out.print("Digite a largura: ");
         double largura = scanner.nextDouble();
 
@@ -76,12 +76,12 @@ public class Exercicio3 {
         System.out.println("\n===== Retângulo A =====");
         retA.exibirInformacoes();
 
-        // retângulo inválido — valores <= 0 direto no construtor
+
         System.out.println("===== Retângulo B (valores inválidos no construtor) =====");
         Retangulo retB = new Retangulo(-5.0, 0.0);
         retB.exibirInformacoes();
 
-        // alteração inválida via setter após criação
+
         System.out.println("===== Retângulo A — setter inválido após criação =====");
         retA.setLargura(-3.0);
         retA.exibirInformacoes();

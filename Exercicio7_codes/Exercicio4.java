@@ -7,13 +7,13 @@ class Carro {
     private int    ano;
     private int    velocidadeAtual = 0;
 
-    // construtor — recebe modelo e ano
+
     public Carro(String modelo, int ano) {
         this.modelo = modelo;
         this.ano    = ano;
     }
 
-    // ── Getters para todos ────────────────────────────────
+
     public String getModelo() {
         return modelo;
     }
@@ -26,17 +26,17 @@ class Carro {
         return velocidadeAtual;
     }
 
-    // ── Setter apenas para modelo ─────────────────────────
+
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
-    // ── Getter booleano ───────────────────────────────────
+
     public boolean isEmMovimento() {
         return velocidadeAtual > 0;
     }
 
-    // ── Métodos operacionais ──────────────────────────────
+
     public void acelerar(int incremento) {
         if (incremento > 0) {
             velocidadeAtual += incremento;
@@ -91,12 +91,12 @@ public class Exercicio4 {
         carro.frear(20);
         carro.exibirStatus();
 
-        // tenta frear além de zero
+
         System.out.println("===== Freando além do limite =====");
         carro.frear(999);
         carro.exibirStatus();
 
-        // testa incremento inválido
+
         System.out.println("===== Aceleração inválida =====");
         carro.acelerar(-10);
 

@@ -28,7 +28,7 @@ public abstract class ContaBancaria {
     }
 
     protected void descontarTaxa(double valor) {
-        // Neste exemplo, a cobranca mensal pode deixar o saldo negativo.
+
         saldo -= valor;
     }
 

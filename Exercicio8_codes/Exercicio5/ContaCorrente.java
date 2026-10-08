@@ -24,16 +24,16 @@ public class ContaCorrente extends Conta {
         double poderDeSaque  = getSaldo() + limiteChequeEspecial;
 
         if (valorTotal <= poderDeSaque) {
-            // desconta manualmente pois o saldo pode ficar negativo
-            // (a regra de Conta não permite saldo negativo)
+
+
             double novoSaldo = getSaldo() - valorTotal;
-            // zera via sacar da superclasse e redeposita o valor correto
-            super.sacar(getSaldo());         // zera o saldo atual
+
+            super.sacar(getSaldo());
             if (novoSaldo < 0) {
-                // deposita o que sobrou do limite (valor negativo virou positivo)
+
                 depositar(limiteChequeEspecial - Math.abs(novoSaldo +
                           limiteChequeEspecial - limiteChequeEspecial));
-                // ajuste direto — registra o saldo negativo
+
                 super.sacar(getSaldo() + Math.abs(novoSaldo));
             }
             System.out.printf(

@@ -4,7 +4,7 @@ public class Exercicio2 {
 
     public static void main(String[] args) {
 
-        // array do tipo da superclasse — guarda qualquer subtipo
+
         Funcionario[] equipe = {
             new Funcionario("Ana Costa",   3000.00),
             new Gerente    ("Bruno Lima",  5000.00, 1500.00),
@@ -18,7 +18,7 @@ public class Exercicio2 {
         double totalFolha = 0.0;
 
         for (Funcionario f : equipe) {
-            f.exibirSalario();                // dynamic binding em ação
+            f.exibirSalario();
             totalFolha += f.calcularSalario();
         }
 

@@ -2,7 +2,7 @@ package Exercicio8_codes.Exercicio4;
 
 public class FiguraGeometrica {
 
-    // contrato: toda figura sabe calcular sua área
+
     public double calcularArea() {
         return 0.0;
     }

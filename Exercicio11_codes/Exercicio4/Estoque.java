@@ -26,7 +26,7 @@ public class Estoque {
             return;
         }
 
-        // Valores positivos adicionam unidades; negativos retiram unidades.
+
         int novaQuantidade = produtos.get(codigo) + variacao;
         produtos.put(codigo, novaQuantidade);
         System.out.println("Produto " + codigo + " | Quantidade: " + novaQuantidade);

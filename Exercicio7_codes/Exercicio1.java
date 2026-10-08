@@ -2,24 +2,24 @@ package Exercicio7_codes;
 
 class Produto {
 
-    // atributos privados — ninguém acessa diretamente de fora
+
     private String nome;
     private double preco;
     private int    quantidadeEstoque;
 
-    // construtor completo — 3 parâmetros
+
     public Produto(String nome, double preco, int quantidadeEstoque) {
         this.nome = nome;
-        setPreco(preco);                         // já usa o setter com validação
-        setQuantidadeEstoque(quantidadeEstoque); // já usa o setter com validação
+        setPreco(preco);
+        setQuantidadeEstoque(quantidadeEstoque);
     }
 
-    // construtor sobrecarregado — 2 parâmetros, estoque começa em 0
+
     public Produto(String nome, double preco) {
-        this(nome, preco, 0); // chama o construtor completo acima
+        this(nome, preco, 0);
     }
 
-    // ── Getters ──────────────────────────────────────────
+
     public String getNome() {
         return nome;
     }
@@ -32,7 +32,7 @@ class Produto {
         return quantidadeEstoque;
     }
 
-    // ── Setters com validação ─────────────────────────────
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -53,7 +53,7 @@ class Produto {
         }
     }
 
-    // ── Método de negócio ─────────────────────────────────
+
     public double calcularValorTotalEmEstoque() {
         return preco * quantidadeEstoque;
     }
@@ -71,10 +71,10 @@ public class Exercicio1 {
 
     public static void main(String[] args) {
 
-        // Produto A — construtor completo (3 parâmetros)
+
         Produto produtoA = new Produto("Notebook", 3500.00, 15);
 
-        // Produto B — construtor sobrecarregado (2 parâmetros)
+
         Produto produtoB = new Produto("Mouse", 150.00);
 
         System.out.println("===== Produto A =====");
@@ -83,7 +83,7 @@ public class Exercicio1 {
         System.out.println("===== Produto B =====");
         produtoB.exibirInformacoes();
 
-        // tentativa de preço negativo — deve ser bloqueada
+
         System.out.println("===== Teste de validação =====");
         System.out.printf("Preço atual do Produto A: R$ %.2f%n", produtoA.getPreco());
         produtoA.setPreco(-10.0);

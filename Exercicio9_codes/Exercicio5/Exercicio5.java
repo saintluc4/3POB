@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Exercicio5 {
     public static void main(String[] args) {
-        // Interpretacao do enunciado incompleto: parque de equipamentos eletronicos.
+
         List<DispositivoEletronico> dispositivos = Arrays.asList(
                 new Computador("Computador do laboratorio"),
                 new Calculadora("Calculadora da sala"));
